@@ -1,4 +1,4 @@
-# Celeb Birthdays
+# Celeb Birthdays [![Build Status](https://travis-ci.org/alebelcor/celeb-birthdays.svg?branch=master)](https://travis-ci.org/alebelcor/celeb-birthdays)
 
 > Find out what celebrities have the same birthday as you
 
