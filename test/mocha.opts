@@ -1,0 +1,4 @@
+--ui bdd
+--reporter mocha-better-spec-reporter
+--colors
+--recursive

@@ -1,0 +1,35 @@
+{
+  "name": "celeb-birthdays",
+  "version": "0.1.0",
+  "description": "Find out what celebrities have the same birthday as you",
+  "keywords": [
+    "celebrity",
+    "birthday",
+    "useless"
+  ],
+  "license": "MIT",
+  "author": "Alejandro Beltrán",
+  "files": [
+    "update.js",
+    "output/celeb-birthdays.js"
+  ],
+  "main": "output/celeb-birthdays.js",
+  "bin": "update.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alebelcor/celeb-birthdays.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "bluebird": "^2.3.11",
+    "cheerio": "^0.18.0",
+    "request-promise": "^0.3.2"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "mocha": "^2.0.1",
+    "mocha-better-spec-reporter": "^1.1.1"
+  }
+}
