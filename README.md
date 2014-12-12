@@ -15,6 +15,7 @@ You can also use it as a Node module. Just install it `npm install --save celeb-
 ```js
 var birthdays = require('celeb-birthdays');
 console.log(birthdays['08-07']); // MM-DD format
+
 // [ 'Charlize Theron',
 //   'Abbie Cornish',
 //   'David Duchovny',
