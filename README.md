@@ -12,7 +12,7 @@ Run `./convert.js` to fetch the latest celebrity birthdays.
 
 You can also use it as a Node module. Just install it `npm install --save celeb-birthdays` and then require it in your code:
 
-```js
+```javascript
 var birthdays = require('celeb-birthdays');
 console.log(birthdays['08-07']); // MM-DD format
 
