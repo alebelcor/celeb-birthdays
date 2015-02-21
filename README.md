@@ -8,7 +8,7 @@ Even though all files are provided here, you might want to update them yourself.
 
 You'll need [Node.js](http://nodejs.org), then `cd` into this folder and `npm install`.
 
-Run `./convert.js` to fetch the latest celebrity birthdays.
+Run `./update.js` to fetch the latest celebrity birthdays.
 
 You can also use it as a Node module. Just install it `npm install --save celeb-birthdays` and then require it in your code:
 
