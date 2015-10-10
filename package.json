@@ -10,6 +10,7 @@
   "license": "MIT",
   "author": "Alejandro Beltrán",
   "files": [
+    "dates.js",
     "update.js",
     "output/celeb-birthdays.js"
   ],
@@ -20,16 +21,16 @@
     "url": "https://github.com/alebelcor/celeb-birthdays.git"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "generate": "./update.js"
   },
   "dependencies": {
-    "bluebird": "^2.3.11",
-    "cheerio": "^0.18.0",
-    "request-promise": "^0.3.2"
+    "bluebird": "^2.10.2",
+    "cheerio": "^0.19.0",
+    "got": "^4.2.0"
   },
   "devDependencies": {
-    "chai": "^1.10.0",
-    "mocha": "^2.0.1",
-    "mocha-better-spec-reporter": "^1.1.1"
+    "chai": "^3.3.0",
+    "mocha": "^2.3.3"
   }
 }

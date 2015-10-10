@@ -4,43 +4,40 @@
 
 var fs = require('fs');
 var path = require('path');
-var cheerio = require('cheerio');
-var Promise = require('bluebird');
-var request = require('request-promise');
 
-var dates = require('./dates.json');
-var pkg = require('./package.json');
+var cheerio = require('cheerio');
+var got = require('got');
+var Promise = require('bluebird');
+
+var dates = require(path.resolve('.', 'dates'));
+var pkg = require(path.resolve('.', 'package.json'));
 
 var promises = [];
 var json = {};
 var OUTPUT_DIR = 'output';
+
+function getRequestURLforDate(date) {
+  if (typeof date !== 'string' || date.length !== 5) {
+    throw new Error('Date has be valid.');
+  }
+
+  return 'http://www.imdb.com/date/' + date;
+}
 
 function write(filename, data) {
   fs.writeFileSync(path.join(OUTPUT_DIR, filename), data, 'utf8');
 }
 
 dates.forEach(function (date) {
-  var options = {
-    uri: 'http://www.imdb.com/date/' + date,
-    resolveWithFullResponse: true
-  };
-
   json[date] = [];
 
-  var promise = request.get(options)
-    .then(function (response) {
-      return new Promise(function (resolve) {
-        var $ = cheerio.load(response.body);
+  promises.push(got(getRequestURLforDate(date)).then(function (response) {
+    var $ = cheerio.load(response.body);
 
-        $('#main > ul:first-of-type > li > a').each(function () {
-          json[date].push($(this).text().trim());
-        });
-
-        resolve();
-      });
+    $('#main > ul:first-of-type > li > a').each(function () {
+      json[date].push($(this).text().trim());
     });
-
-  promises.push(promise);
+  }));
 });
 
 Promise.all(promises).then(function () {
