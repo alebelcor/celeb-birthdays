@@ -2,6 +2,7 @@
 
 > Find out what celebrities have the same birthday as you
 
+[![npm version](https://img.shields.io/npm/v/celeb-birthdays.svg)](https://npmjs.org/package/celeb-birthdays)
 [![Build Status](https://travis-ci.org/alebelcor/celeb-birthdays.svg?branch=master)](https://travis-ci.org/alebelcor/celeb-birthdays)
 
 ## Downloads
@@ -9,7 +10,7 @@
 - [celeb-birthdays.json](https://raw.githubusercontent.com/alebelcor/celeb-birthdays/master/output/celeb-birthdays.json):
   Object with string members (in the form `MM-DD`) containing an array of names each one.
 
-*Last updated 2014-12-15*
+*Last updated 2015-10-14*
 
 ## Getting started
 
