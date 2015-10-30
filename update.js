@@ -7,7 +7,7 @@ var path = require('path');
 
 var cheerio = require('cheerio');
 var got = require('got');
-var Promise = require('bluebird');
+var Promise = require('pinkie-promise');
 
 var dates = require(path.resolve('.', 'dates'));
 var pkg = require(path.resolve('.', 'package.json'));
