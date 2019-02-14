@@ -1,3 +1,9 @@
+# Deprecated
+
+![No Maintenance Intended](https://img.shields.io/maintenance/no/2019.svg)
+
+- - -
+
 # celeb-birthdays
 
 > Find out what celebrities have the same birthday as you
